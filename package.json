@@ -1,0 +1,23 @@
+{
+  "name": "nougit-challenge-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dliuproduction/nougit-challenge-backend.git"
+  },
+  "author": "Dennis Liu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dliuproduction/nougit-challenge-backend/issues"
+  },
+  "homepage": "https://github.com/dliuproduction/nougit-challenge-backend#readme",
+  "dependencies": {
+    "apollo-server": "^2.9.12",
+    "graphql": "^14.5.8"
+  }
+}
