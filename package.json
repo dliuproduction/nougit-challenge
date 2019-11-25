@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ./src/index.js"
+    "start": "next start",
+    "start:lambda": "netlify-lambda serve src/lambda",
+    "build": "next build",
+    "build:lambda": "netlify-lambda build src/lambda",
+    "dev": "next dev",
+    "dev:server": "nodemon src/lambda/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,8 +22,15 @@
   },
   "homepage": "https://github.com/dliuproduction/nougit-challenge-backend#readme",
   "dependencies": {
-    "apollo-datasource-mongodb": "^0.2.0",
+    "@apollo/react-hooks": "^3.1.3",
+    "apollo-boost": "^0.4.4",
+    "apollo-link-http": "^1.5.16",
     "apollo-server": "^2.9.12",
-    "graphql": "^14.5.8"
+    "graphql": "^14.5.8",
+    "isomorphic-unfetch": "^3.0.0",
+    "next": "^9.1.4",
+    "next-with-apollo": "^4.3.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   }
 }

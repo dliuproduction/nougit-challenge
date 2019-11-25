@@ -18,7 +18,7 @@ const taskSchema = new mongoose.Schema({
     status: { type: Number, enum: [0, 1] }
 });
 
-let data = fs.readFileSync(path.resolve(__dirname, '../../entries.json'));
+let data = fs.readFileSync(path.resolve(__dirname, '../../../entries.json'));
 let entries = JSON.parse(data);
 
 taskSchema.statics.initTasks = tasks => {
