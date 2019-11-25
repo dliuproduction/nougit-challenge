@@ -15,7 +15,7 @@ const taskSchema = new mongoose.Schema({
     pledgeTotal: Number,
     pledgeGoal: Number,
     pledgerCount: Number,
-    status: { type: String, enum: ['0', '1'] }
+    status: { type: Number, enum: [0, 1] }
 });
 
 let data = fs.readFileSync(path.resolve(__dirname, '../../entries.json'));
