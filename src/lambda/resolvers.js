@@ -4,14 +4,11 @@ module.exports = {
             const query = db.task.find({}, null, { skip: after });
             const results = await query.exec();
 
-            const newEntriesCount = Math.min(results.length, pageSize)
+            const newEntriesCount = Math.min(results.length, pageSize);
 
-            const entries = results.slice(
-                0,
-                newEntriesCount
-            );
+            const entries = results.slice(0, newEntriesCount);
 
-            const newCursor = after + newEntriesCount
+            const newCursor = after + newEntriesCount;
 
             return {
                 tasks: entries,
@@ -19,9 +16,5 @@ module.exports = {
                 hasMore: results.length > pageSize
             };
         }
-    },
-    Statuses: {
-        CLOSED: 0,
-        OPEN: 1
     }
 };

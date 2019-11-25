@@ -24,7 +24,7 @@ module.exports = gql`
         pledgeTotal: Float
         pledgeGoal: Float
         pledgerCount: Int
-        status: Statuses
+        status: Int
     }
 
     type Author {
@@ -32,10 +32,5 @@ module.exports = gql`
         picture: String
         title: String
         score: Float
-    }
-
-    enum Statuses {
-        OPEN
-        CLOSED
     }
 `;

@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { useQuery } from '@apollo/react-hooks';
 import { GET_ENTRIES_QUERY } from '../utils/queries';
+import { Card, Filter, Layout } from '../components';
 
 const Home = () => {
     // Create a query hook
@@ -14,18 +15,14 @@ const Home = () => {
     if (error) {
         return <p>Error: {JSON.stringify(error)}</p>;
     }
+
     return (
-        <div>
-            <Head>
-                <title>Home</title>
-                <link rel='icon' href='/favicon.ico' />
-            </Head>
-            <ul>
-                {
-                    console.log(data)
-                }
-            </ul>
-        </div>
+        <Layout>
+            <Filter />
+            {data.getEntries.tasks.map(entry => (
+                <Card task={entry} />
+            ))}
+        </Layout>
     );
 };
 
