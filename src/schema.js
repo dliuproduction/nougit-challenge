@@ -1,13 +1,14 @@
 const { gql } = require('apollo-server');
 
-const typeDefs = gql`
+module.exports = gql`
     type Query {
-        getEntries: [Task]
+        getEntries(pageSize: Int, after: Int): TaskEntry
     }
 
-    enum Statuses {
-        OPEN
-        CLOSED
+    type TaskEntry {
+        cursor: Int
+        hasMore: Boolean
+        tasks: [Task]
     }
 
     type Task {
@@ -32,5 +33,9 @@ const typeDefs = gql`
         title: String
         score: Float
     }
+
+    enum Statuses {
+        OPEN
+        CLOSED
+    }
 `;
-module.exports = typeDefs;
