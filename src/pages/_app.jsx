@@ -1,7 +1,6 @@
 import React from 'react';
 import App from 'next/app';
 import { ApolloProvider } from '@apollo/react-hooks';
-
 import withApollo from '../utils/apollo-client';
 
 class MyApp extends App {

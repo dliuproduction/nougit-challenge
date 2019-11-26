@@ -1,8 +1,8 @@
 import {gql} from 'apollo-boost';
 
 export const GET_ENTRIES_QUERY = gql`
-  query GetEntries {
-  getEntries(pageSize: 17, after: 0) {
+  query GetEntries($pageSize: Int, $after: Int) {
+  getEntries(pageSize: $pageSize, after: $after) {
     cursor
     hasMore
     tasks {
