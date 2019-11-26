@@ -5,11 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "next start",
-    "start:lambda": "netlify-lambda serve src/lambda",
     "build": "next build",
-    "build:lambda": "netlify-lambda build src/lambda",
     "dev": "next dev",
-    "dev:server": "nodemon src/lambda/index.js"
+    "dev:server": "nodemon src/server/index.js"
   },
   "repository": {
     "type": "git",
@@ -27,10 +25,8 @@
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.7",
     "apollo-boost": "^0.4.4",
-    "apollo-link-http": "^1.5.16",
     "apollo-server": "^2.9.12",
     "graphql": "^14.5.8",
-    "isomorphic-unfetch": "^3.0.0",
     "next": "^9.1.4",
     "next-with-apollo": "^4.3.0",
     "react": "^16.12.0",
