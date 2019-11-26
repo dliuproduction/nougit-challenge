@@ -11,10 +11,5 @@ export const Layout = props => (
                 width: 100%;
             }
         `}</style>
-        <style global jsx>{`
-            body {
-                font-family: arial;
-            }
-        `}</style>
     </React.Fragment>
 );

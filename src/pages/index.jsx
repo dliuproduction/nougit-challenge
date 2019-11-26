@@ -70,13 +70,25 @@ const Home = () => {
 
     return (
         <React.Fragment>
+            <style global jsx>{`
+                body {
+                    font-family: arial;
+                }
+                ul {
+                    list-style-type: none;
+                }
+            `}</style>
             <Head>{library.add(faComment, faShare)}</Head>
             <Layout>
                 <Filter filter={filter} setFilter={setFilter} />
                 <ul>
-                    {filterTasks(data.getEntries.tasks, filter).map(task => (
-                        <Card task={task} />
-                    ))}
+                    {filterTasks(data.getEntries.tasks, filter).map(
+                        (task, index) => (
+                            <li key={index}>
+                                <Card task={task} />
+                            </li>
+                        )
+                    )}
                     {loading && `loading...`}
                 </ul>
             </Layout>
